@@ -1,0 +1,7 @@
+mysql://b2e27851b08bb1:ccf4b5fb@us-cdbr-east-06.cleardb.net/heroku_813be3ee8adffef?reconnect=true
+
+Host: us-cdbr-east-06.cleardb.net
+usuario: b2e27851b08bb1
+senha: ccf4b5fb
+Banco: heroku_813be3ee8adffef
+
