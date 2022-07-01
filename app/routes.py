@@ -93,7 +93,7 @@ def vendas():
         vendas = Vendas(id_acao=(form_vendas.id_acao.data).id, autor=current_user, data=form_vendas.data.data, quantidade=form_vendas.quantidade.data, valor_unitario=form_vendas.valor_unitario.data, total_taxas=form_vendas.total_taxas.data, total_venda=(form_vendas.valor_unitario.data * form_vendas.quantidade.data)-form_vendas.total_taxas.data, resultado='0.0')
         database.session.add(vendas)
         database.session.commit()
-        flash('Compra Registrada com Sucesso', 'alert-success')
+        flash('Venda Registrada com Sucesso', 'alert-success')
         return redirect(url_for('vendas_lista'))
     return render_template('vendas.html', form_vendas=form_vendas)
 

@@ -14,7 +14,7 @@
 <body>
   {% include 'navbar.html' %}
 
-  <div class="container pb-4">
+  <div class="container pb-2">
     {% with mensagens = get_flashed_messages(with_categories=True) %} {% if
     mensagens %} {% for categoria, mensagem in mensagens %}
     <div class="alert {{ categoria }}">{{ mensagem }}</div>
