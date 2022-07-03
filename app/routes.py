@@ -330,11 +330,11 @@ def busca():
         r = requests.get(url)
         cot_acao = r.json()
         data_cot = (cot_acao['Meta Data']['3. Last Refreshed'])
-
-
         data_formatada = datetime.strptime(data_cot, "%Y-%m-%d").strftime("%d/%m/%Y")
+        cot_atual = cot_acao['Time Series (Daily)'][data_cot]['4. close']
+        cot_formatada = "R$ {:,.2f}".format(float(cot_atual))
 
-        return render_template('cotacaolista.html',cot_acao=cot_acao, data_cot=data_cot, form_busca=form_busca, busca_acao=busca_acao, data_formatada=data_formatada)
+        return render_template('cotacaolista.html',cot_acao=cot_acao, data_cot=data_cot, form_busca=form_busca, busca_acao=busca_acao, data_formatada=data_formatada, cot_formatada=cot_formatada)
 
     return render_template('cotacao.html', form_busca=form_busca)
 
